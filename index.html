@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="showBooks">
+        <p>{{title}}- {{author}}-{{age}}</p>
+      </div>
+      <!-- <h2>this is a test text</h2> -->
+      <button v-on:click="age++">increase</button>
+      <button v-on:click="age--">decrease</button>
+
+      <div @click="changeTitle('chimical')">change title</div>
+
+      <button @click="changeShowBook">
+        <span v-if="showBooks">hide bboks</span>
+        <span v-else>show bboks</span>
+      </button>
+      <div v-show=showBooks>showing...</div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
