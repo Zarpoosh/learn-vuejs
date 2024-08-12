@@ -3,6 +3,8 @@ const app = Vue.createApp({
   // template: "<h2>this is a test text </h2>",
   data() {
     return {
+      x:0,
+      y:0,
       showBooks: true,
       title: "masnavi",
       author: "molavi",
@@ -18,6 +20,15 @@ const app = Vue.createApp({
     changeShowBook() {
       this.showBooks = !this.showBooks;
     },
+    handleEvent(e) {
+      console.log("event");
+      console.log(e);
+      
+    },
+    handleMouseMove(e){
+      this.x=e.offsetX
+      this.y=e.offsetY
+    }
   },
 });
 
