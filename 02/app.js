@@ -3,11 +3,12 @@ const app = Vue.createApp({
   // template: "<h2>this is a test text </h2>",
   data() {
     return {
-      showbooks: true,
+      url:"https://github.com/Zarpoosh?tab=repositories",
+      showBooks: true,
       books: [
-        { title: "boof koor", price: 12000 },
-        { title: "sag velgard", price: 2300 },
-        { title: "kelidar", price: 65000 },
+        { title: "boof koor", price: 12000 , image: "./images/img1.png"},
+        { title: "sag velgard", price: 2300 , image: "./images/img2.png"},
+        { title: "kelidar", price: 65000 , image: "./images/img3.png"},
       ],
     };
   },

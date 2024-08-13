@@ -5,27 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
-    <!-- <style>
-      .box{
-        padding:100px 0;
-        width:400px;
-        text-align:center;
-        background:#139fb8;
-        margin:20px;
-        display:inline-block;
+    <style>
+      img {
+        width: 200px;
+        height: 100px;
       }
-    </style> -->
+    </style>
   </head>
   <body>
     <div id="app">
+      <!-- v-bind: or : -->
+      <a :href="url">github</a>
       <div v-if="showBooks">
-        <p>{{books[0].title}}- {{books[0].price}}</p>
-        <p>{{books[1].title}}- {{books[1].price}}</p>
+        <!-- <p>{{books[0].title}}- {{books[0].price}}</p>
+        <p>{{books[1].title}}- {{books[1].price}}</p> -->
 
         <ul v-for="book in books">
           <li>
             <h3>{{book.title}}</h3>
             <p>{{book.price}}</p>
+            <img :src="book.image" :alt="book.title" />
           </li>
         </ul>
       </div>
@@ -34,7 +33,6 @@
         <span v-if="showBooks">hide books</span>
         <span v-else>show books</span>
       </button>
-
     </div>
 
     <script src="./app.js"></script>
