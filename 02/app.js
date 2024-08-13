@@ -6,9 +6,9 @@ const app = Vue.createApp({
       url:"https://github.com/Zarpoosh?tab=repositories",
       showBooks: true,
       books: [
-        { title: "boof koor", price: 12000 , image: "./images/img1.png"},
-        { title: "sag velgard", price: 2300 , image: "./images/img2.png"},
-        { title: "kelidar", price: 65000 , image: "./images/img3.png"},
+        { title: "boof koor", price: 12000 , image: "./images/img1.png" , isFav:false},
+        { title: "sag velgard", price: 2300 , image: "./images/img2.png" , isFav:true},
+        { title: "kelidar", price: 65000 , image: "./images/img3.png" , isFav:true},
       ],
     };
   },

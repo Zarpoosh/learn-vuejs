@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
-    <style>
-      img {
-        width: 200px;
-        height: 100px;
-      }
-    </style>
+   <link rel="stylesheet" href="./main.css">
   </head>
   <body>
     <div id="app">
@@ -21,7 +16,7 @@
         <p>{{books[1].title}}- {{books[1].price}}</p> -->
 
         <ul v-for="book in books">
-          <li>
+          <li :class="{fav:book.isFav}">
             <h3>{{book.title}}</h3>
             <p>{{book.price}}</p>
             <img :src="book.image" :alt="book.title" />
