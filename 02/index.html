@@ -9,14 +9,15 @@
   </head>
   <body>
     <div id="app">
+      <!-- <p {{filteredBooks}}></p> -->
       <!-- v-bind: or : -->
       <a :href="url">github</a>
       <div v-if="showBooks">
         <!-- <p>{{books[0].title}}- {{books[0].price}}</p>
         <p>{{books[1].title}}- {{books[1].price}}</p> -->
 
-        <ul v-for="book in books">
-          <li :class="{fav:book.isFav}" @click="activeMode(book)">
+        <ul v-for="book in filteredBooks">
+          <li :class="{fav:book.isFav}" @click="changeFav(book)">
             <h3>{{book.title}}</h3>
             <p>{{book.price}}</p>
             <img :src="book.image" :alt="book.title" />
