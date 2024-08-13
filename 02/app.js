@@ -3,12 +3,27 @@ const app = Vue.createApp({
   // template: "<h2>this is a test text </h2>",
   data() {
     return {
-      url:"https://github.com/Zarpoosh?tab=repositories",
+      url: "https://github.com/Zarpoosh?tab=repositories",
       showBooks: true,
       books: [
-        { title: "boof koor", price: 12000 , image: "./images/img1.png" , isFav:false},
-        { title: "sag velgard", price: 2300 , image: "./images/img2.png" , isFav:true},
-        { title: "kelidar", price: 65000 , image: "./images/img3.png" , isFav:true},
+        {
+          title: "boof koor",
+          price: 12000,
+          image: "./images/img1.png",
+          isFav: false,
+        },
+        {
+          title: "sag velgard",
+          price: 2300,
+          image: "./images/img2.png",
+          isFav: true,
+        },
+        {
+          title: "kelidar",
+          price: 65000,
+          image: "./images/img3.png",
+          isFav: true,
+        },
       ],
     };
   },
@@ -28,6 +43,9 @@ const app = Vue.createApp({
     handleMouseMove(e) {
       this.x = e.offsetX;
       this.y = e.offsetY;
+    },
+    activeMode(book) {
+      book.isFav = !book.isFav;
     },
   },
 });
